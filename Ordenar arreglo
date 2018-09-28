@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+#include <iostream>
+void ordenararreglo();
+int arreglo[5]={7,6,5,2,3};
+int aux=0;
+int cambio=1;
+
+
+int main ()
+{
+    
+  ordenararreglo();
+  
+  
+}
+
+void ordenararreglo()
+{
+ while(cambio!=0)
+ {
+     cambio=0;
+  for (int i=0;i<5;i++)
+  {
+      
+          if((arreglo[i]>arreglo[i+1]) && (i+1<5))
+          {
+              
+              aux=arreglo[i];
+              arreglo[i]=arreglo[i+1];
+              arreglo[i+1]=aux;
+              cambio=cambio+1;
+          }
+   }
+ }
+    
+   for(int j=0;j<5;j++)
+   {
+       std::cout  <<arreglo[j]<< std::endl;
+       
+       
+       
+   }
+}
